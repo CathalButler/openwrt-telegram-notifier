@@ -199,7 +199,7 @@ made it executable `chmod +x event_listener.sh` and ran:
 hostapd_cli -a/root/event_listener.sh -B -iwlan1
 ```
 The flag `-a` allows a file to be excluded when an event takes place.<br>
-The flag `-B` allows the process to run in th background.
+The flag `-B` allows the process to run in th background.<br>
 The Flag `-i` in the interface to monitor.
 
 Now when I connect and disconnect a device I can see messages in the chat from the bot!
@@ -223,6 +223,7 @@ a list of known connected devices and also try to gather and provide a more in-d
 * https://www.systutorials.com/docs/linux/man/1-hostapd_cli/
 * https://forum.openwrt.org/t/solved-assoc-disassoc-event-trigger/3341
 * https://openwrt.org/
+* https://core.telegram.org/methods
 
 
 
