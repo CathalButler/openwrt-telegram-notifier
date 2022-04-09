@@ -200,7 +200,7 @@ hostapd_cli -a/root/event_listener.sh -B -iwlan1
 ```
 The flag `-a` allows a file to be excluded when an event takes place.<br>
 The flag `-B` allows the process to run in th background.<br>
-The Flag `-i` in the interface to monitor.
+The flag `-i` in the interface to monitor.
 
 Now when I connect and disconnect a device I can see messages in the chat from the bot!
 ![Slate Notifications Chat](img/chat.png)
