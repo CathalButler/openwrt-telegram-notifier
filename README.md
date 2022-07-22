@@ -1,4 +1,4 @@
-# OpenWRT Device Nofication System
+# OpenWRT Device Notification System
 
 While travelling, I was in need of a travel router as I was using a VPN for all my devices, so I picked up a Raspberry Pi
 and installed [OpenWRT](https://openwrt.org/) on it which comes with a load of cool features out of the box. 
