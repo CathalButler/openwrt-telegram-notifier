@@ -1,19 +1,14 @@
 # OpenWRT Device Notification System
 
-While travelling, I was in need of a travel router as I was using a VPN for all my devices, so I picked up a Raspberry Pi
-and installed [OpenWRT](https://openwrt.org/) on it which comes with a load of cool features out of the box. 
-One feature which I wanted was a way to easily be notified on when a device had connected to the router.
+While travelling, I was in need of a travel router as I was using a VPN for all my devices, so I picked up a Raspberry Pi and installed [OpenWRT](https://openwrt.org/) on it, which comes with a load of cool features out of the box. One feature that I wanted was a way to easily be notified when a device had connected to the router.
 
-When thinking about how I could do this I had Telegram in mind as I could set up a bot and use the API to send messages 
-and monitor it that way. Before I could use the API bot I needed a way to run a script when either a new device connected
-or disconnected from the router. To do this I used [hostapd-utils](https://www.systutorials.com/docs/linux/man/1-hostapd_cli/) 
-which is a process that when configured will run a script on a selected interface when a device connects or disconnects.
+When thinking about how I could do this, I had Telegram in mind, as I could set up a bot and use the API to send messages and monitor it that way. Before I could use the API bot, I needed a way to run a script when either a new device connected or disconnected from the router. To do this, I used 
+[hostapd-utils](https://www.systutorials.com/docs/linux/man/1-hostapd_cli/), which is a process that, when configured, will run a script on a selected interface when a device connects or disconnects.
 
-To get started I first need to create a Telegram bot which I can use for delivering updates on connected devices.
+To get started, I first need to create a Telegram bot, which I can use for delivering updates on connected devices.
 
 ### Creating a Telegram bot
-To create a bot I used the [BotFather](https://t.me/BotFather) on Telegram which makes it very easy to 
-create a bot. Below you will see a Bot created called "Slate" which in this case is the router:
+To create a bot, I used the [BotFather](https://t.me/BotFather) on Telegram, which makes it very easy to create a bot. Below you will see a bot created called "Slate", which in this case is the router:
 
 ````text
 /newbot
@@ -39,8 +34,8 @@ For a description of the Bot API, see this page: https://core.telegram.org/bots/
 
 ````
 
-The next step is to create a new group on Telegram and invite the newly created bot to it, in my case I called the group
-"Slate Notification". Once you have the bot added to the group chat you can gather updates for the both using the `getUpdate` method.
+The next step is to create a new group on Telegram and invite the newly created bot to it. In my case, I called the group "Slate Notification".
+Once you have the bot added to the group chat, you can gather updates for both using the getUpdate method.
 ```shell
 curl https://api.telegram.org/bot$APIKEY/getUpdates| jq
 ```
